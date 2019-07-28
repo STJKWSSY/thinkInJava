@@ -11,10 +11,6 @@ import java.util.Random;
  */
 public class mathOps {
 
-    public static void main(String[] args) {
-        shortCircuit();
-    }
-
     /**
      * java各种运算符 一元运算符
      */
@@ -108,4 +104,63 @@ public class mathOps {
         System.out.println("test3 < 3");
         return val < 3;
     }
+
+
+    /**
+     * java字符串操作符 + / +=
+     * 操作符重载
+     */
+    public static void stringMathOps(){
+        int x = 0, y = 1, z = 2;
+        String s = "x , y, z";
+        System.out.println(s + x + y + z);
+        System.out.println(" " + z);
+    }
+
+    /**
+     * 类型转化操作符
+     * Java会将一种数据类型转换为另一种，编译器允许我们显式的进行类型进行转换，或者是在不能转化的时候强制转换
+     *  对于扩展转换，则不必显示的进行类型转换.
+     *
+     */
+    public static void castObject(){
+     int  x = 200;
+     long i = (long)x;
+     long lng2 = 200;
+     lng2 = 200;
+    }
+
+    /**
+     *  截尾和窄化=> 最大即结果类型
+     *  强制类型转换，执行窄化是，必须注意截尾和舍入问题
+     *
+     */
+    public static void castingNumbers(){
+        double above = 0.7 ,below = 0.4;
+        float  fabove = 0.7f,fbelow = 0.4f;
+        /*
+          0,0,0,0
+         */
+        System.out.println("(int) above :" + (int)above);
+        System.out.println("(int)below : " + (int)below);
+        System.out.println("(int)fabove :" + (int)fabove);
+        System.out.println("(int)fbelow :" + (int)fbelow);
+    }
+
+    /**
+     * 越界/溢出
+     *
+     */
+    public static void overFlow(){
+        int maxBig = Integer.MAX_VALUE;
+        System.out.println("maxBig = " + maxBig);
+        System.out.println("overFlow = " + (maxBig * 4));
+    }
+
+    public static void main(String[] args) {
+       overFlow();
+    }
+
+
+
 }
